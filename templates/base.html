@@ -1,4 +1,3 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -13,24 +12,37 @@
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            <img src="https://www.ifro.edu.br/img/logo-ifro-hotsite.png" alt="ifro" width="70" class="d-inline-block align-text-top">
+            <img src="https://play-lh.googleusercontent.com/6irmW1vXy884nc1pdhWXaWCy051C70o7nbQ-qa-Ct84qJalNopVSXOUD2Fu53JgILCM" alt="ifro" width="50" style="border-radius: 5px;" class="d-inline-block align-text-top">
           </a>
           <ul class="nav justify-content-end">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/index">Página Inicial</a>
+              <a class="nav-link active" aria-current="page" href="/home">Página Inicial</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/visualizar">Visualizar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/usuario">Usuário</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/contato">Contatos</a>
             </li>
-            <!--<li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-            </li>-->
           </ul>
         </div>
       </nav>
-
+  {% block conteudo %}
+     
+  {% endblock %}
+  <footer class="bg-body-tertiary text-center text-lg-start">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+      <p>&copy; <span id="copyright-year"></span> Copyright Luiz Bicalho</p>
+    </div>
+    <!-- Copyright -->
+  </footer>
 </body>
 </html>
+
+<script>
+  document.getElementById('copyright-year').textContent = new Date().getFullYear();
+  </script>

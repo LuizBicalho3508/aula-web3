@@ -1,15 +1,18 @@
+{% extends 'base.html' %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>{% block aba %}Usuário{% endblock %}</title>
 </head>
 <body>
-    <H1>Página de Usuário teste</H1>
+    {% block conteudo %}
+    <H1>Página de Usuário</H1>
     <br>
     <p>Nome: {{ nome }}</p>
     <p>Profissão: {{ dados['profissao']}}</p>
     <p>Disciplina: {{ dados['disciplina']}}</p>
+    {% endblock %}
 </body>
 </html>
