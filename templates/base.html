@@ -19,10 +19,13 @@
               <a class="nav-link active" aria-current="page" href="/home">Página Inicial</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/visualizar">Visualizar</a>
+              <a class="nav-link" aria-current="page" href="/visualizar">Visualizar</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/usuario">Usuário</a>
+              <a class="nav-link" aria-current="page" href="/usuario">Usuário</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/login">Login</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/contato">Contatos</a>
@@ -30,9 +33,11 @@
           </ul>
         </div>
       </nav>
-  {% block conteudo %}
-     
-  {% endblock %}
+      <div class="container">
+        {% block conteudo %}
+        <!-- Conteúdo da página -->
+        {% endblock %}
+      </div>
   <footer class="bg-body-tertiary text-center text-lg-start">
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
